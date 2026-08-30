@@ -548,6 +548,19 @@
     }
   }
 </style>
+<script>
+  /* Automated DOM Sanitizer: ensures zero bracketed citation tags on render */
+  document.addEventListener("DOMContentLoaded", function() {
+    function cleanNode(node) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        node.nodeValue = node.nodeValue.replace(/\/gi, '').replace(/\[\s*\d+\s*\]/g, '');
+      } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
+        node.childNodes.forEach(cleanNode);
+      }
+    }
+    cleanNode(document.body);
+  });
+</script>
 </head>
 <body>
 
