@@ -3,25 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammad Umair - Faculty & Academic Curriculum Vitae</title>
+<title>Muhammad Umair — Academic Curriculum Vitae</title>
 <style>
   :root {
-    --primary: #0f172a;
-    --primary-light: #1e293b;
-    --accent: #2563eb;
-    --accent-hover: #1d4ed8;
-    --accent-light: #38bdf8;
+    --primary: #0c1628;
+    --primary-light: #1a2f4e;
+    --accent: #1e40af;
+    --accent-hover: #1e3a8a;
+    --accent-light: #93c5fd;
     --text-main: #1e293b;
     --text-muted: #64748b;
-    --bg-page: #f1f5f9;
+    --bg-page: #edf1f7;
     --bg-card: #ffffff;
     --bg-alt: #f8fafc;
     --border-color: #e2e8f0;
-    --border-hover: #cbd5e1;
-    --pill-bg: #e0f2fe;
-    --pill-text: #0369a1;
-    --active-green: #16a34a;
+    --border-hover: #94a3b8;
+    --pill-bg: #dbeafe;
+    --pill-text: #1e3a8a;
+    --active-green: #15803d;
     --active-bg: #dcfce7;
+    --gold: #b8920a;
+    --gold-light: #fde68a;
   }
 
   @page {
@@ -55,33 +57,32 @@
     background-color: var(--bg-card);
     border-radius: 12px;
     padding: 22px 26px;
-    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    box-shadow: 0 10px 25px -5px rgba(12, 22, 40, 0.1), 0 8px 10px -6px rgba(12, 22, 40, 0.05);
   }
 
-  /* REUSABLE INTERACTIVE HOVER EFFECT FOR ALL BOXES */
+  /* HOVER EFFECT */
   .interactive-box {
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .interactive-box:hover {
-    transform: translateY(-2.5px);
+    transform: translateY(-2px);
     border-color: var(--accent) !important;
-    box-shadow: 0 8px 18px -2px rgba(37, 99, 235, 0.12), 0 3px 8px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 16px -2px rgba(30, 64, 175, 0.12), 0 3px 6px -2px rgba(0, 0, 0, 0.05);
   }
 
-  /* HEADER BLOCK */
+  /* ── HEADER ─────────────────────────────────────── */
   .header-card {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 60%, #1e3a5f 100%);
     color: #ffffff;
-    padding: 18px 22px;
+    padding: 18px 22px 15px;
     border-radius: 10px;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
     gap: 20px;
+    border-bottom: 3px solid var(--gold);
   }
-  .photo-wrapper {
-    flex-shrink: 0;
-  }
+  .photo-wrapper { flex-shrink: 0; }
   .profile-photo {
     width: 90px;
     height: 90px;
@@ -90,11 +91,19 @@
     border: 3px solid var(--accent-light);
     display: block;
     background-color: #334155;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
   }
   .info-wrapper {
     flex-grow: 1;
     min-width: 0;
+  }
+  .cv-eyebrow {
+    font-size: 6.8pt;
+    font-weight: 600;
+    letter-spacing: 2.8px;
+    color: rgba(147, 197, 253, 0.65);
+    text-transform: uppercase;
+    margin-bottom: 3px;
   }
   .name {
     font-size: 20pt;
@@ -106,12 +115,11 @@
     line-height: 1.15;
   }
   .title-tag {
-    font-size: 9.6pt;
+    font-size: 8.8pt;
     font-weight: 600;
     color: var(--accent-light);
     margin: 0 0 8px 0;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
+    letter-spacing: 0.1px;
   }
   .contact-grid {
     display: grid;
@@ -139,7 +147,7 @@
     font-size: 8.2pt;
   }
   .header-direct-link a {
-    color: var(--accent-light);
+    color: var(--gold-light);
     text-decoration: none;
     font-weight: 600;
     display: inline-flex;
@@ -147,26 +155,26 @@
     gap: 5px;
   }
   .header-direct-link a:hover {
-    color: #bae6fd;
+    color: #fef3c7;
     text-decoration: underline;
   }
 
-  /* SUMMARY */
+  /* ── SUMMARY ─────────────────────────────────────── */
   .summary-card {
     background-color: var(--bg-alt);
-    border-left: 4.5px solid var(--accent);
+    border-left: 4px solid var(--accent);
     border-top: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);
-    padding: 9px 13px;
+    padding: 10px 14px;
     border-radius: 0 8px 8px 0;
     font-size: 8.6pt;
     color: #334155;
-    line-height: 1.45;
+    line-height: 1.52;
     margin-bottom: 10px;
   }
 
-  /* GLOBAL REACH STRIP */
+  /* ── INTERNATIONAL REACH ─────────────────────────── */
   .international-strip {
     background-color: var(--bg-alt);
     border: 1px solid var(--border-color);
@@ -186,11 +194,10 @@
     gap: 6px 8px;
   }
   .international-label {
-    font-size: 7.9pt;
+    font-size: 7.8pt;
     font-weight: 800;
     color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     margin-right: 2px;
   }
   .country-tag {
@@ -210,10 +217,10 @@
     flex-wrap: wrap;
   }
   .marketplace-badge {
-    background-color: #e0f2fe;
-    border: 1px solid #7dd3fc;
-    color: #0369a1;
-    padding: 2px 8px;
+    background-color: #dbeafe;
+    border: 1px solid #93c5fd;
+    color: var(--accent);
+    padding: 2px 9px;
     border-radius: 5px;
     font-weight: 700;
     font-size: 7.7pt;
@@ -221,26 +228,63 @@
     display: inline-block;
   }
   .marketplace-badge:hover {
-    background-color: #bae6fd;
+    background-color: #bfdbfe;
   }
 
-  /* SECTION TITLE */
+  /* ── COURSES TO TEACH ────────────────────────────── */
+  .courses-strip {
+    background: linear-gradient(135deg, #eff6ff 0%, #f8fafc 100%);
+    border: 1px solid #bfdbfe;
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 8px 13px;
+    margin-bottom: 10px;
+  }
+  .courses-label {
+    font-size: 7.8pt;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 0.3px;
+    margin-bottom: 5px;
+  }
+  .course-pill {
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #93c5fd;
+    color: var(--accent);
+    font-size: 7.2pt;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 4px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+  }
+
+  /* ── SECTION TITLE ───────────────────────────────── */
   .section-title {
-    font-size: 9.6pt;
+    font-size: 9pt;
     font-weight: 700;
     color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
+    letter-spacing: 0.5px;
     margin-top: 12px;
-    margin-bottom: 6px;
-    padding-bottom: 2px;
+    margin-bottom: 7px;
+    padding-bottom: 4px;
     border-bottom: 2px solid var(--accent);
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
+  }
+  .section-title::before {
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent);
+    border-radius: 2px;
+    flex-shrink: 0;
   }
 
-  /* COMPETENCIES GRID */
+  /* ── SKILLS GRID ─────────────────────────────────── */
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -254,14 +298,12 @@
     border-radius: 8px;
   }
   .skills-heading {
-    font-size: 8pt;
+    font-size: 7.8pt;
     font-weight: 700;
     color: #1e3a8a;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    border-bottom: 1px solid #cbd5e1;
-    padding-bottom: 2px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #bfdbfe;
+    padding-bottom: 3px;
   }
   .skill-pill {
     display: inline-block;
@@ -275,7 +317,7 @@
     margin-bottom: 2.5px;
   }
 
-  /* EXPERIENCE SECTION */
+  /* ── EXPERIENCE ──────────────────────────────────── */
   .job-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -285,7 +327,7 @@
   .job-card {
     background-color: #ffffff;
     border: 1px solid var(--border-color);
-    padding: 8px 12px;
+    padding: 9px 13px;
     border-radius: 8px;
   }
   .job-header {
@@ -309,7 +351,7 @@
   .job-dates.active {
     color: var(--active-green);
     background-color: var(--active-bg);
-    padding: 1px 6px;
+    padding: 1px 7px;
     border-radius: 4px;
     font-weight: 700;
   }
@@ -317,28 +359,26 @@
     font-size: 8.2pt;
     font-weight: 600;
     color: #475569;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
   }
   .org-link {
     color: var(--accent);
     text-decoration: none;
     font-weight: 600;
   }
-  .org-link:hover {
-    text-decoration: underline;
-  }
+  .org-link:hover { text-decoration: underline; }
   .bullet-list {
-    margin: 2px 0 0 0;
+    margin: 3px 0 0 0;
     padding-left: 14px;
   }
   .bullet-list li {
-    margin-bottom: 2px;
+    margin-bottom: 2.5px;
     font-size: 8.2pt;
     color: #334155;
-    line-height: 1.36;
+    line-height: 1.4;
   }
 
-  /* EDUCATION & DETAILS SPLIT */
+  /* ── EDUCATION & SIDEBAR ─────────────────────────── */
   .bottom-split {
     display: grid;
     grid-template-columns: 1.25fr 0.75fr;
@@ -350,7 +390,7 @@
     background-color: var(--bg-alt);
     border: 1px solid var(--border-color);
     border-left: 4px solid var(--accent);
-    padding: 8px 11px;
+    padding: 9px 12px;
     border-radius: 0 8px 8px 0;
     margin-bottom: 6px;
   }
@@ -363,10 +403,12 @@
     font-size: 8.1pt;
     color: var(--accent);
     font-weight: 600;
+    margin-top: 1px;
   }
   .edu-date {
     font-size: 7.6pt;
     color: var(--text-muted);
+    margin-top: 1px;
   }
   .cgpa-badge {
     display: inline-block;
@@ -374,19 +416,19 @@
     color: #15803d;
     font-size: 7.2pt;
     font-weight: 700;
-    padding: 1px 5px;
+    padding: 1px 6px;
     border-radius: 4px;
-    margin-top: 2px;
+    margin-top: 3px;
   }
   .thesis-box {
-    margin-top: 4px;
-    padding: 4px 6px;
+    margin-top: 5px;
+    padding: 5px 8px;
     background-color: #ffffff;
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    border-radius: 5px;
     font-size: 7.5pt;
     color: #334155;
-    line-height: 1.34;
+    line-height: 1.42;
   }
   .side-box {
     background-color: var(--bg-alt);
@@ -396,22 +438,20 @@
     margin-bottom: 6px;
   }
   .side-title {
-    font-size: 8.2pt;
+    font-size: 7.9pt;
     font-weight: 700;
     color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    margin-bottom: 3px;
-    border-bottom: 1px solid #cbd5e1;
-    padding-bottom: 2px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #bfdbfe;
+    padding-bottom: 3px;
   }
   .side-list {
     font-size: 8pt;
     color: #334155;
-    line-height: 1.38;
+    line-height: 1.48;
   }
 
-  /* INTERACTIVE CLICKABLE QR MATRIX */
+  /* ── QR CREDENTIALS ──────────────────────────────── */
   .qr-section {
     margin-top: 8px;
     padding: 10px 12px;
@@ -436,14 +476,10 @@
     text-decoration: none;
     color: inherit;
     cursor: pointer;
-    position: relative;
-    overflow: hidden;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   }
-  .qr-card:hover {
-    background-color: #f0f7ff;
-  }
-  .qr-card .qr-img {
+  .qr-card:hover { background-color: #eff6ff; }
+  .qr-img {
     width: 68px;
     height: 68px;
     border-radius: 6px;
@@ -456,9 +492,9 @@
   .qr-card:hover .qr-img {
     border-color: var(--accent-light);
     transform: scale(1.04);
-    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 4px 10px rgba(30, 64, 175, 0.2);
   }
-  .qr-card .qr-title {
+  .qr-title {
     font-size: 7.7pt;
     font-weight: 700;
     color: var(--primary);
@@ -466,329 +502,326 @@
     text-align: center;
     transition: color 0.2s ease;
   }
-  .qr-card:hover .qr-title {
-    color: var(--accent-hover);
-  }
-  .qr-card .qr-sub {
+  .qr-card:hover .qr-title { color: var(--accent-hover); }
+  .qr-sub {
     font-size: 7pt;
     color: var(--accent);
     font-weight: 600;
     text-align: center;
-    transition: all 0.2s ease;
   }
   .qr-card:hover .qr-sub {
-    color: #0284c7;
+    color: #1e3a8a;
     text-decoration: underline;
   }
 
-  /* RESPONSIVE LAYOUT */
+  /* ── RESPONSIVE ──────────────────────────────────── */
   @media screen and (max-width: 860px) {
-    body {
-      padding: 10px 6px;
-    }
-    .cv-card {
-      padding: 16px 14px;
-    }
-    .contact-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    .skills-grid {
-      grid-template-columns: 1fr;
-    }
-    .bottom-split {
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-    .qr-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-    }
+    body { padding: 10px 6px; }
+    .cv-card { padding: 16px 14px; }
+    .contact-grid { grid-template-columns: repeat(2, 1fr); }
+    .skills-grid { grid-template-columns: 1fr; }
+    .bottom-split { grid-template-columns: 1fr; gap: 0; }
+    .qr-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
   }
-
   @media screen and (max-width: 600px) {
-    .header-card {
-      flex-direction: column;
-      text-align: center;
-      padding: 14px 12px;
-    }
-    .name {
-      font-size: 16pt;
-    }
-    .contact-grid {
-      grid-template-columns: 1fr;
-      text-align: left;
-    }
-    .header-direct-link {
-      text-align: center;
-    }
-    .international-strip {
-      flex-direction: column;
-      align-items: flex-start;
-    }
+    .header-card { flex-direction: column; text-align: center; padding: 14px 12px; }
+    .name { font-size: 16pt; }
+    .contact-grid { grid-template-columns: 1fr; text-align: left; }
+    .header-direct-link { text-align: center; }
+    .international-strip { flex-direction: column; align-items: flex-start; }
   }
-
-  /* PRINT PRESERVATION */
   @media print {
-    body {
-      background-color: #ffffff;
-      padding: 0;
-      max-width: 100%;
-    }
-    .cv-wrapper {
-      max-width: 100%;
-    }
-    .cv-card {
-      box-shadow: none;
-      padding: 0;
-      border-radius: 0;
-    }
-    .interactive-box:hover {
-      transform: none !important;
-      box-shadow: none !important;
-    }
+    body { background-color: #ffffff; padding: 0; }
+    .cv-wrapper { max-width: 100%; }
+    .cv-card { box-shadow: none; padding: 0; border-radius: 0; }
+    .interactive-box:hover { transform: none !important; box-shadow: none !important; }
   }
 </style>
-<script>
-  /* Automated DOM Sanitizer: ensures zero bracketed citation tags on render */
-  document.addEventListener("DOMContentLoaded", function() {
-    function cleanNode(node) {
-      if (node.nodeType === Node.TEXT_NODE) {
-        node.nodeValue = node.nodeValue.replace(/\/gi, '').replace(/\[\s*\d+\s*\]/g, '');
-      } else if (node.nodeType === Node.ELEMENT_NODE && node.tagName !== 'SCRIPT' && node.tagName !== 'STYLE') {
-        node.childNodes.forEach(cleanNode);
-      }
-    }
-    cleanNode(document.body);
-  });
-</script>
 </head>
 <body>
 
 <div class="cv-wrapper">
+<div class="cv-card">
 
-  <div class="cv-card">
-
-    <!-- HEADER BLOCK -->
-    <header class="header-card">
-      <div class="photo-wrapper">
-        <img src="profile photo sqr.png" class="profile-photo" alt="Muhammad Umair" onerror="this.onerror=null; this.src='profile_photo.jpg';">
+  <!-- HEADER -->
+  <header class="header-card">
+    <div class="photo-wrapper">
+      <img src="profile photo sqr.png" class="profile-photo" alt="Muhammad Umair"
+           onerror="this.onerror=null; this.src='profile_photo.jpg';">
+    </div>
+    <div class="info-wrapper">
+      <div class="cv-eyebrow">Curriculum Vitae</div>
+      <h1 class="name">Muhammad Umair</h1>
+      <div class="title-tag">Faculty Candidate in Strategic Communication, Consumer Psychology &amp; Digital Media Pedagogy</div>
+      <div class="contact-grid">
+        <div class="contact-item"><span class="contact-label">Location:</span> Riyadh, Saudi Arabia — On-Site Ready</div>
+        <div class="contact-item"><span class="contact-label">Phone / WhatsApp:</span> <a href="https://wa.me/966536210490" target="_blank">+966 53 621 0490</a></div>
+        <div class="contact-item"><span class="contact-label">Email:</span> <a href="mailto:umairyaseenjutt@gmail.com">umairyaseenjutt@gmail.com</a></div>
       </div>
-      <div class="info-wrapper">
-        <h1 class="name">Muhammad Umair</h1>[cite: 1]
-        <div class="title-tag">Faculty Candidate in Strategic Communication, Consumer Psychology & Digital Media Pedagogy</div>
-        <div class="contact-grid">
-          <div class="contact-item"><span class="contact-label">Location:</span> Riyadh, Saudi Arabia (On-Site Ready)</div>[cite: 1]
-          <div class="contact-item"><span class="contact-label">Phone / WA:</span> <a href="https://wa.me/966536210490" target="_blank">+966 53 621 0490</a></div>[cite: 1]
-          <div class="contact-item"><span class="contact-label">Email:</span> <a href="mailto:umairyaseenjutt@gmail.com">umairyaseenjutt@gmail.com</a></div>[cite: 1]
-        </div>
-        <div class="header-direct-link">
-          <a href="https://www.youtube.com/playlist?list=PLzxfLA-b-Eqwz-BB-7EIwGyjjv_Nym-uH" target="_blank">🎬 Commercial Advertisements, SaaS Demos & Agency Portfolio Playlist</a>[cite: 1]
-        </div>
-      </div>
-    </header>
-
-    <!-- PROFESSIONAL & ACADEMIC SUMMARY -->
-    <section class="summary-card interactive-box">
-      Higher education <strong>Faculty Candidate, Communication Strategist, and Emerging Tech Educator</strong> with over 7 years of global instructional delivery, multimedia course creation, and curriculum development[cite: 1]. Integrates advanced graduate coursework in <strong>Public Relations & Advertising (CGPA: 3.70 / 4.00, ongoing)</strong> with foundational expertise in <strong>Applied & Consumer Psychology (CGPA: 3.47 / 4.00)</strong> to teach audience behavioral analysis, persuasive message design, AI-assisted media workflows, and multimedia production[cite: 1]. Adept at active classroom instruction, digital LMS management, and mentoring undergraduate capstone projects[cite: 1].
-    </section>
-
-    <!-- GLOBAL REACH STRIP -->
-    <section class="international-strip interactive-box">
-      <div class="international-left">
-        <div class="international-label">Global Client Reach:</div>
-        <span class="country-tag">🇺🇸 USA</span>
-        <span class="country-tag">🇸🇦 Saudi Arabia</span>
-        <span class="country-tag">🇬🇧 UK</span>
-        <span class="country-tag">🇨🇦 Canada</span>
-        <span class="country-tag">🇦🇺 Australia</span>
-      </div>
-      <div class="marketplace-group">
-        <a href="https://fiverr.com/umairyaseenjutt" target="_blank" class="marketplace-badge interactive-box">⭐ Fiverr: 800+ Orders (2018–2025)</a>[cite: 1]
-        <a href="https://www.upwork.com/freelancers/umairyaseenjutt?mp_source=share" target="_blank" class="marketplace-badge interactive-box">🏆 Upwork: Top-Rated (2018–Present)</a>[cite: 1]
-      </div>
-    </section>
-
-    <!-- CORE COMPETENCIES & TEACHING TOOLKIT -->
-    <section>
-      <div class="section-title">⚡ Core Competencies & Academic Toolkit</div>
-      <div class="skills-grid">
-        <div class="skills-cell interactive-box">
-          <div class="skills-heading">Strategic PR & Consumer Psychology</div>
-          <span class="skill-pill">Consumer Behavior & Insights</span>
-          <span class="skill-pill">Strategic Communications (IMC)</span>
-          <span class="skill-pill">Brand Positioning & Governance</span>
-          <span class="skill-pill">Audience Behavioral Analysis</span>
-          <span class="skill-pill">Persuasive Rhetoric & PR</span>
-        </div>
-        <div class="skills-cell interactive-box">
-          <div class="skills-heading">Digital & AI Instruction</div>
-          <span class="skill-pill">Curriculum & Syllabus Design</span>
-          <span class="skill-pill">Generative AI (LLMs & Prompts)</span>
-          <span class="skill-pill">Midjourney & Runway Workflows</span>
-          <span class="skill-pill">LMS & E-Learning Portals</span>
-          <span class="skill-pill">Project-Based Learning (PBL)</span>
-        </div>
-        <div class="skills-cell interactive-box">
-          <div class="skills-heading">Multimedia & Media Production</div>
-          <span class="skill-pill">Adobe Premiere Pro</span>
-          <span class="skill-pill">Adobe After Effects</span>
-          <span class="skill-pill">Camtasia Screencasting</span>
-          <span class="skill-pill">Commercial & SaaS Ads</span>
-          <span class="skill-pill">Slide Design Ergonomics</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROFESSIONAL & INSTRUCTIONAL EXPERIENCE -->
-    <section>
-      <div class="section-title">💼 Teaching & Professional Experience</div>
-      <div class="job-grid">
-
-        <div class="job-card interactive-box">
-          <div class="job-header">
-            <div class="job-role">Online AI Course Instructor & Curriculum Specialist</div>
-            <div class="job-dates active">2024 – Present</div>[cite: 1]
-          </div>
-          <div class="job-org"><a href="https://zakariaafzal.com/" target="_blank" class="org-link">zakariaafzal.com</a> | Online Emerging Tech Platform</div>[cite: 1]
-          <ul class="bullet-list">
-            <li>Design and deliver modular digital curricula covering prompt engineering, generative image synthesis (Midjourney), and AI video creation workflows (Runway)[cite: 1].</li>
-            <li>Prepare term course packages, including syllabi, lecture presentations, practical lab exercises, and rubric-based evaluations[cite: 1].</li>
-            <li>Supervise hands-on student projects and mentor learners on applying AI automation to creative and communication workflows[cite: 1].</li>
-          </ul>
-        </div>
-
-        <div class="job-card interactive-box">
-          <div class="job-header">
-            <div class="job-role">Enterprise Multimedia & Technical Content Producer</div>
-            <div class="job-dates active">Aug 2018 – Present</div>[cite: 1]
-          </div>
-          <div class="job-org"><a href="https://www.upwork.com/freelancers/umairyaseenjutt?mp_source=share" target="_blank" class="org-link">Upwork Enterprise Freelancing</a> (Top-Rated | 200+ International Clients)</div>[cite: 1]
-          <ul class="bullet-list">
-            <li>Direct end-to-end commercial product walkthroughs, software screencasts, and customer education videos for global technology companies[cite: 1].</li>
-            <li>Translate complex technical architectures, software interfaces, and feature sets into structured, high-retention instructional and promotional media[cite: 1].</li>
-          </ul>
-        </div>
-
-        <div class="job-card interactive-box">
-          <div class="job-header">
-            <div class="job-role">Strategic PR & Digital Media Specialist</div>
-            <div class="job-dates">2021 – 2026</div>[cite: 1]
-          </div>
-          <div class="job-org"><a href="https://clinichq.com/" target="_blank" class="org-link">ClinicHQ</a> (USA Healthcare SaaS Ecosystem)</div>[cite: 1]
-          <ul class="bullet-list">
-            <li>Served as dedicated PR strategist and communications lead for executive leadership across a 5-year partnership[cite: 1].</li>
-            <li>Authored and produced the complete nationwide digital staff training library and customer onboarding video series for veterinary hospitals and clinics across the US[cite: 1].</li>
-          </ul>
-        </div>
-
-        <div class="job-card interactive-box">
-          <div class="job-header">
-            <div class="job-role">Instructional Video Producer & Motion Designer</div>
-            <div class="job-dates">Aug 2018 – Dec 2025</div>[cite: 1]
-          </div>
-          <div class="job-org"><a href="https://fiverr.com/umairyaseenjutt" target="_blank" class="org-link">Fiverr Pro / Level 2 Seller</a> (800+ Completed Orders | 400+ 5-Star Reviews)</div>[cite: 1]
-          <ul class="bullet-list">
-            <li>Delivered 800+ promotional, commercial, and instructional video deliverables for international clients, maintaining a verified 5.0★ rating[cite: 1].</li>
-            <li>Produced official tutorial videos and advertising demos for global software brands including Wondershare DemoCreator and Doratoon[cite: 1].</li>
-          </ul>
-        </div>
-
-        <div class="job-card interactive-box">
-          <div class="job-header">
-            <div class="job-role">Instructional Media Creator & Channel Producer</div>
-            <div class="job-dates">Jan 2016 – 2025</div>[cite: 1]
-          </div>
-          <div class="job-org"><a href="https://www.youtube.com/@mbastudio.online/playlists" target="_blank" class="org-link">MBA Studio</a> (Educational Digital Media Channel)</div>[cite: 1]
-          <ul class="bullet-list">
-            <li>Produced and published instructional tutorials focusing on video post-production workflows, visual pacing, and creative software literacy[cite: 1].</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- EDUCATION & RESEARCH PROFILE -->
-    <section>
-      <div class="section-title">🎓 Education & Scholarly Profile</div>
-      <div class="bottom-split">
-        <div>
-          <div class="edu-item interactive-box">
-            <div class="edu-degree">MPhil in Public Relations & Advertising</div>[cite: 1]
-            <div class="edu-school"><a href="https://pu.edu.pk/home/department/52/School-of-Communication-Studies" target="_blank" class="org-link">School of Communication Studies, University of the Punjab</a></div>[cite: 1]
-            <div class="edu-date">October 2025 – May 2027 (Ongoing)</div>[cite: 1]
-            <div><span class="cgpa-badge">CGPA: 3.70 / 4.00</span></div>[cite: 1]
-            <div class="thesis-box">
-              <strong>Ongoing MPhil Thesis:</strong> <em>"Financial Insecurity and Work Stress as Predictors of Psychological Well-Being among Freelancers in Pakistan: The Mediating Role of Work–Life Balance and Social Isolation."</em><br>
-              <strong>Scholarly & Thesis Interests:</strong> Artificial Intelligence in Media & Advertising, Algorithmic Persuasion, Social Media Dynamics, and the Future of Digital Communication Pedagogy.
-            </div>
-          </div>
-          <div class="edu-item interactive-box">
-            <div class="edu-degree">BS in Applied Psychology</div>[cite: 1]
-            <div class="edu-school"><a href="https://su.edu.pk/" target="_blank" class="org-link">Department of Psychology, University of Sargodha</a></div>[cite: 1]
-            <div class="edu-date">March 2020 – August 2024</div>[cite: 1]
-            <div><span class="cgpa-badge">CGPA: 3.47 / 4.00</span></div>[cite: 1]
-            <div class="thesis-box">
-              <strong>Completed BS Thesis:</strong> <em>"Relationship Among Leader’s Political Skill, Leader Member Exchange, Ethical Leadership And Some Work Outcomes Among Employees."</em><br>
-              <strong>Academic Specialization:</strong> Consumer Psychology, Cognitive Reception, Organizational Behavior Modeling, and Quantitative Research Methodologies.
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="side-box interactive-box">
-            <div class="side-title">Languages</div>
-            <div class="side-list">
-              <strong>English:</strong> Professional / Fluent (Teaching Medium)[cite: 1]<br>
-              <strong>Urdu:</strong> Native / Bilingual[cite: 1]<br>
-              <strong>Arabic:</strong> Basic Working Knowledge[cite: 1]
-            </div>
-          </div>
-          <div class="side-box interactive-box">
-            <div class="side-title">Pedagogical Strengths</div>
-            <div class="side-list">
-              • Consumer psychology-backed audience engagement<br>
-              • Generative AI & modern workflow training<br>
-              • Active student-centered learning & rubric design<br>
-              • Commercial video & agency-grade ad creation
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INTERACTIVE CLICKABLE QR MATRIX -->
-    <section class="qr-section interactive-box">
-      <div class="section-title" style="margin-top: 0; margin-bottom: 8px;">📲 Scan or Click to Verify Academic & Media Credentials</div>
-      <div class="qr-grid">
-
-        <a href="https://umairyaseenjutt.github.io/muhammadumair/" target="_blank" class="qr-card interactive-box" title="Open Teaching Dossier">
-          <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fumairyaseenjutt.github.io%2Fmuhammadumair%2F" alt="Teaching Dossier QR">
-          <div class="qr-title">Teaching Dossier</div>
-          <span class="qr-sub">muhammadumair</span>
+      <div class="header-direct-link">
+        <a href="https://www.youtube.com/playlist?list=PLzxfLA-b-Eqwz-BB-7EIwGyjjv_Nym-uH" target="_blank">
+          ▶ Commercial Advertisements, SaaS Demos &amp; Agency Portfolio Playlist
         </a>
+      </div>
+    </div>
+  </header>
 
-        <a href="https://fiverr.com/umairyaseenjutt" target="_blank" class="qr-card interactive-box" title="Open Fiverr Freelance Portfolio">
-          <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Ffiverr.com%2Fumairyaseenjutt" alt="Fiverr QR">
-          <div class="qr-title">Fiverr Adverts Freelance</div>
-          <span class="qr-sub">800+ Global Deliverables</span>
-        </a>
+  <!-- ACADEMIC SUMMARY -->
+  <section class="summary-card interactive-box">
+    Interdisciplinary scholar-practitioner and <strong>faculty candidate</strong> with over seven years of experience in multimedia curriculum design, evidence-based instructional delivery, and strategic communication practice across global academic and industry contexts. Synthesizes advanced graduate scholarship in <strong>Public Relations &amp; Advertising</strong> (CGPA: 3.70 / 4.00, ongoing) with a foundational degree in <strong>Applied &amp; Consumer Psychology</strong> (CGPA: 3.47 / 4.00) to deliver research-informed instruction in audience behavioral analysis, persuasive media design, AI-integrated communication workflows, and visual media production. Demonstrates sustained commitment to student-centered pedagogy, digital learning environment management, and the translation of professional practice into structured, assessable academic coursework — well suited to undergraduate and postgraduate teaching contexts across communication, media, and applied psychology programs.
+  </section>
 
-        <a href="https://www.youtube.com/playlist?list=PLzxfLA-b-Eqwz-BB-7EIwGyjjv_Nym-uH" target="_blank" class="qr-card interactive-box" title="Open Advertisements We Made Playlist">
-          <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLzxfLA-b-Eqwz-BB-7EIwGyjjv_Nym-uH" alt="Advertisements QR">
-          <div class="qr-title">Advertisements We Made</div>
-          <span class="qr-sub">Commercial Video Playlist</span>
-        </a>
+  <!-- INTERNATIONAL REACH -->
+  <section class="international-strip interactive-box">
+    <div class="international-left">
+      <div class="international-label">International Professional Reach:</div>
+      <span class="country-tag">🇺🇸 USA</span>
+      <span class="country-tag">🇸🇦 Saudi Arabia</span>
+      <span class="country-tag">🇬🇧 UK</span>
+      <span class="country-tag">🇨🇦 Canada</span>
+      <span class="country-tag">🇦🇺 Australia</span>
+    </div>
+    <div class="marketplace-group">
+      <a href="https://fiverr.com/umairyaseenjutt" target="_blank" class="marketplace-badge interactive-box">★ Fiverr: 800+ Deliverables (2018–2025)</a>
+      <a href="https://www.upwork.com/freelancers/umairyaseenjutt?mp_source=share" target="_blank" class="marketplace-badge interactive-box">✦ Upwork: Top-Rated (2018–Present)</a>
+    </div>
+  </section>
 
-        <a href="https://wa.me/966536210490" target="_blank" class="qr-card interactive-box" title="Open Direct WhatsApp Contact">
-          <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwa.me%2F966536210490" alt="WhatsApp Direct Line QR">
-          <div class="qr-title">Direct Contact</div>
-          <span class="qr-sub">+966 53 621 0490</span>
-        </a>
+  <!-- COURSES PREPARED TO TEACH -->
+  <section class="courses-strip interactive-box">
+    <div class="courses-label">Courses Prepared to Teach</div>
+    <span class="course-pill">Introduction to Mass Communication</span>
+    <span class="course-pill">Consumer Psychology &amp; Media Audiences</span>
+    <span class="course-pill">Strategic Public Relations</span>
+    <span class="course-pill">Advertising Theory &amp; Practice</span>
+    <span class="course-pill">Digital Marketing Communication</span>
+    <span class="course-pill">AI in Communication &amp; Media</span>
+    <span class="course-pill">Visual Media Production</span>
+    <span class="course-pill">Research Methods in Communication</span>
+    <span class="course-pill">Brand Strategy &amp; Management</span>
+    <span class="course-pill">Persuasion &amp; Propaganda Studies</span>
+  </section>
+
+  <!-- CORE COMPETENCIES -->
+  <section>
+    <div class="section-title">Teaching Competencies &amp; Disciplinary Expertise</div>
+    <div class="skills-grid">
+      <div class="skills-cell interactive-box">
+        <div class="skills-heading">Communication Theory &amp; Consumer Psychology</div>
+        <span class="skill-pill">Consumer Behavior &amp; Audience Insights</span>
+        <span class="skill-pill">Strategic Communications (IMC)</span>
+        <span class="skill-pill">Brand Positioning &amp; Governance</span>
+        <span class="skill-pill">Persuasive Rhetoric &amp; Digital PR</span>
+        <span class="skill-pill">Crisis Communications Strategy</span>
+        <span class="skill-pill">Behavioral &amp; Cognitive Reception</span>
+      </div>
+      <div class="skills-cell interactive-box">
+        <div class="skills-heading">Digital Pedagogy &amp; Emerging Technologies</div>
+        <span class="skill-pill">Curriculum &amp; Syllabus Design</span>
+        <span class="skill-pill">Instructional Design (ADDIE / PBL)</span>
+        <span class="skill-pill">Generative AI (LLMs &amp; Prompting)</span>
+        <span class="skill-pill">Midjourney &amp; Runway AI Workflows</span>
+        <span class="skill-pill">LMS &amp; E-Learning Portals</span>
+        <span class="skill-pill">Assessment &amp; Rubric Development</span>
+      </div>
+      <div class="skills-cell interactive-box">
+        <div class="skills-heading">Multimedia Production &amp; Applied Media</div>
+        <span class="skill-pill">Adobe Premiere Pro</span>
+        <span class="skill-pill">Adobe After Effects</span>
+        <span class="skill-pill">Screencasting &amp; Tutorial Production</span>
+        <span class="skill-pill">Commercial &amp; SaaS Ad Creation</span>
+        <span class="skill-pill">Visual Communication Theory</span>
+        <span class="skill-pill">Slide Design Ergonomics</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <div class="section-title">Teaching &amp; Professional Experience</div>
+    <div class="job-grid">
+
+      <div class="job-card interactive-box">
+        <div class="job-header">
+          <div class="job-role">AI Course Instructor &amp; Curriculum Designer</div>
+          <div class="job-dates active">2024 – Present</div>
+        </div>
+        <div class="job-org">
+          <a href="https://zakariaafzal.com/" target="_blank" class="org-link">ZakariaAfzal.com</a>
+          — Online Emerging Technologies Education Platform
+        </div>
+        <ul class="bullet-list">
+          <li>Design and deliver modular digital curricula covering prompt engineering, generative image synthesis (Midjourney), and AI video creation workflows (Runway), serving cohorts of professionals and university-level learners seeking applied AI certification.</li>
+          <li>Author full term course packages — including syllabi, structured lecture presentations, practical lab exercises, and rubric-based assessments — aligned with digital literacy competency frameworks and learning outcome standards.</li>
+          <li>Supervise learner capstone projects and provide individual mentorship on applying AI automation to creative and professional communication workflows; facilitate both synchronous and asynchronous instructional formats.</li>
+        </ul>
+      </div>
+
+      <div class="job-card interactive-box">
+        <div class="job-header">
+          <div class="job-role">Enterprise Multimedia &amp; Technical Content Producer</div>
+          <div class="job-dates active">Aug 2018 – Present</div>
+        </div>
+        <div class="job-org">
+          <a href="https://www.upwork.com/freelancers/umairyaseenjutt?mp_source=share" target="_blank" class="org-link">Upwork Enterprise Freelancing</a>
+          — Top-Rated | 200+ International Clients
+        </div>
+        <ul class="bullet-list">
+          <li>Direct end-to-end commercial product walkthroughs, software screencasts, and customer education videos for global technology companies across the USA, UK, Canada, and Australia.</li>
+          <li>Apply instructional design principles (ADDIE, backward design) to translate complex technical architectures and software interfaces into structured, high-retention educational media — directly mirroring the pedagogical challenge of making abstract content accessible to diverse learner audiences.</li>
+        </ul>
+      </div>
+
+      <div class="job-card interactive-box">
+        <div class="job-header">
+          <div class="job-role">Strategic Public Relations &amp; Digital Media Specialist</div>
+          <div class="job-dates">2021 – 2026</div>
+        </div>
+        <div class="job-org">
+          <a href="https://clinichq.com/" target="_blank" class="org-link">ClinicHQ</a>
+          — USA Healthcare SaaS Ecosystem
+        </div>
+        <ul class="bullet-list">
+          <li>Provided strategic public relations counsel and communications leadership to C-suite executives over a sustained five-year engagement, developing evidence-based internal communication frameworks for stakeholder alignment across distributed national teams.</li>
+          <li>Authored and produced the complete nationwide digital staff training library and customer onboarding video series for veterinary hospitals and clinics across the United States — demonstrating capacity for large-scale instructional content development at a publishable standard.</li>
+        </ul>
+      </div>
+
+      <div class="job-card interactive-box">
+        <div class="job-header">
+          <div class="job-role">Instructional Video Producer &amp; Motion Design Specialist</div>
+          <div class="job-dates">Aug 2018 – Dec 2025</div>
+        </div>
+        <div class="job-org">
+          <a href="https://fiverr.com/umairyaseenjutt" target="_blank" class="org-link">Fiverr Pro / Level 2 Seller</a>
+          — 800+ Completed Orders | 400+ Five-Star Reviews
+        </div>
+        <ul class="bullet-list">
+          <li>Delivered 800+ promotional, commercial, and instructional video productions for international clients, sustaining a verified 5.0 / 5.0 client satisfaction rating over seven consecutive years of engagement.</li>
+          <li>Produced official tutorial series and advertising demonstrations for global software brands including Wondershare DemoCreator and Doratoon — constituting direct evidence of instructional content production at a professional and commercially verified standard.</li>
+        </ul>
+      </div>
+
+      <div class="job-card interactive-box">
+        <div class="job-header">
+          <div class="job-role">Instructional Media Creator &amp; Educational Channel Producer</div>
+          <div class="job-dates">Jan 2016 – 2025</div>
+        </div>
+        <div class="job-org">
+          <a href="https://www.youtube.com/@mbastudio.online/playlists" target="_blank" class="org-link">MBA Studio</a>
+          — Educational Digital Media Channel
+        </div>
+        <ul class="bullet-list">
+          <li>Produced and published instructional tutorials focused on video post-production workflows, visual pacing, and creative software literacy; established content frameworks for digital skills development among media educators and professionals pursuing applied training.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION & SCHOLARLY PROFILE -->
+  <section>
+    <div class="section-title">Education &amp; Scholarly Profile</div>
+    <div class="bottom-split">
+      <div>
+
+        <div class="edu-item interactive-box">
+          <div class="edu-degree">MPhil in Public Relations &amp; Advertising</div>
+          <div class="edu-school">
+            <a href="https://pu.edu.pk/home/department/52/School-of-Communication-Studies" target="_blank" class="org-link">School of Communication Studies, University of the Punjab</a>
+          </div>
+          <div class="edu-date">October 2025 – May 2027 (In Progress)</div>
+          <div><span class="cgpa-badge">CGPA: 3.70 / 4.00</span></div>
+          <div class="thesis-box">
+            <strong>MPhil Thesis (In Progress):</strong> <em>"Financial Insecurity and Work Stress as Predictors of Psychological Well-Being among Freelancers in Pakistan: The Mediating Role of Work–Life Balance and Social Isolation."</em><br><br>
+            <strong>Research Focus Areas:</strong> Artificial Intelligence in Media &amp; Advertising &nbsp;·&nbsp; Algorithmic Persuasion &amp; Digital Influence &nbsp;·&nbsp; Social Media Dynamics &amp; Platform Governance &nbsp;·&nbsp; Digital Communication Pedagogy &nbsp;·&nbsp; Freelancer Psychology &amp; Digital Labor Studies.
+          </div>
+        </div>
+
+        <div class="edu-item interactive-box">
+          <div class="edu-degree">BS in Applied Psychology</div>
+          <div class="edu-school">
+            <a href="https://su.edu.pk/" target="_blank" class="org-link">Department of Psychology, University of Sargodha</a>
+          </div>
+          <div class="edu-date">March 2020 – August 2024</div>
+          <div><span class="cgpa-badge">CGPA: 3.47 / 4.00</span></div>
+          <div class="thesis-box">
+            <strong>Completed BS Thesis:</strong> <em>"Relationship Among Leader's Political Skill, Leader Member Exchange, Ethical Leadership, and Selected Work Outcomes among Organizational Employees."</em><br><br>
+            <strong>Academic Specializations:</strong> Consumer Psychology &nbsp;·&nbsp; Cognitive Reception Theory &nbsp;·&nbsp; Organizational Behavior Modeling &nbsp;·&nbsp; Quantitative Research Methods (SEM, Survey Instrumentation).
+          </div>
+        </div>
 
       </div>
-    </section>
+      <div>
 
-  </div>
+        <div class="side-box interactive-box">
+          <div class="side-title">Languages</div>
+          <div class="side-list">
+            <strong>English:</strong> Professional Fluency — Primary Teaching Medium<br>
+            <strong>Urdu:</strong> Native / Bilingual Proficiency<br>
+            <strong>Arabic:</strong> Basic Working Knowledge
+          </div>
+        </div>
 
+        <div class="side-box interactive-box">
+          <div class="side-title">Pedagogical Philosophy &amp; Strengths</div>
+          <div class="side-list">
+            • Evidence-based instruction informed by consumer psychology research<br>
+            • Curriculum development integrating generative AI and emerging digital workflows<br>
+            • Student-centered active learning with structured rubric assessment design<br>
+            • Applied media production bridging theoretical frameworks and professional practice<br>
+            • Mentorship of undergraduate and certificate-level learner projects
+          </div>
+        </div>
+
+        <div class="side-box interactive-box">
+          <div class="side-title">Research Interests</div>
+          <div class="side-list">
+            • AI &amp; Algorithmic Communication<br>
+            • Persuasion, Propaganda &amp; Digital Influence<br>
+            • Freelancer Psychology &amp; Digital Labor<br>
+            • Social Media &amp; Platform Governance<br>
+            • Digital Media Pedagogy &amp; EdTech
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QR CREDENTIALS -->
+  <section class="qr-section interactive-box">
+    <div class="section-title" style="margin-top: 0; margin-bottom: 8px;">Portfolio &amp; Professional Credentials Verification</div>
+    <div class="qr-grid">
+
+      <a href="https://umairyaseenjutt.github.io/muhammadumair/" target="_blank" class="qr-card interactive-box" title="Open Teaching Dossier">
+        <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fumairyaseenjutt.github.io%2Fmuhammadumair%2F" alt="Teaching Dossier QR">
+        <div class="qr-title">Teaching Dossier</div>
+        <span class="qr-sub">Academic Portfolio</span>
+      </a>
+
+      <a href="https://fiverr.com/umairyaseenjutt" target="_blank" class="qr-card interactive-box" title="Open Fiverr Portfolio">
+        <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Ffiverr.com%2Fumairyaseenjutt" alt="Fiverr QR">
+        <div class="qr-title">Fiverr Professional Portfolio</div>
+        <span class="qr-sub">800+ Global Deliverables</span>
+      </a>
+
+      <a href="https://www.youtube.com/playlist?list=PLzxfLA-b-Eqwz-BB-7EIwGyjjv_Nym-uH" target="_blank" class="qr-card interactive-box" title="Open Media Production Playlist">
+        <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLzxfLA-b-Eqwz-BB-7EIwGyjjv_Nym-uH" alt="Media Production QR">
+        <div class="qr-title">Media Production Portfolio</div>
+        <span class="qr-sub">Commercial Video Playlist</span>
+      </a>
+
+      <a href="https://wa.me/966536210490" target="_blank" class="qr-card interactive-box" title="Direct WhatsApp Contact">
+        <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwa.me%2F966536210490" alt="WhatsApp QR">
+        <div class="qr-title">Direct Contact</div>
+        <span class="qr-sub">+966 53 621 0490</span>
+      </a>
+
+    </div>
+  </section>
+
+</div>
 </div>
 
 </body>
