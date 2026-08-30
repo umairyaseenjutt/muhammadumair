@@ -3,196 +3,255 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Muhammad Umair - Curriculum Vitae | Faculty in Communication Skills</title>
+<title>Muhammad Umair - Faculty & Academic Curriculum Vitae</title>
 <style>
+  :root {
+    --primary: #0f172a;
+    --primary-light: #1e293b;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --accent-light: #38bdf8;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --bg-page: #f1f5f9;
+    --bg-card: #ffffff;
+    --bg-alt: #f8fafc;
+    --border-color: #e2e8f0;
+    --border-hover: #cbd5e1;
+    --pill-bg: #e0f2fe;
+    --pill-text: #0369a1;
+    --active-green: #16a34a;
+    --active-bg: #dcfce7;
+  }
+
   @page {
     size: A4 portrait;
     margin: 8mm 10mm 10mm 10mm;
     background-color: #ffffff;
   }
+
   * {
     box-sizing: border-box;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+
   body {
-    margin: 0 auto;
-    max-width: 840px;
-    background-color: #f8fafc;
-    padding: 16px 8px;
+    margin: 0;
+    padding: 16px 12px;
+    background-color: var(--bg-page);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    color: #1e293b;
+    color: var(--text-main);
     font-size: 8.8pt;
     line-height: 1.42;
   }
-  .cv-container {
-    background-color: #ffffff;
-    border-radius: 8px;
+
+  .cv-wrapper {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  .cv-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
     padding: 22px 26px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
   }
 
-  /* ON-SCREEN TRUST BAR */
-  .action-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
-    padding: 10px 14px;
-    background-color: #0f172a;
-    border-radius: 8px;
-    color: #ffffff;
-    flex-wrap: wrap;
-    gap: 8px;
+  /* REUSABLE INTERACTIVE HOVER EFFECT FOR ALL BOXES */
+  .interactive-box {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .badge-link {
-    color: #38bdf8;
-    text-decoration: none;
-    font-weight: 600;
-    margin-right: 12px;
-    font-size: 8.5pt;
-  }
-  .badge-link:hover {
-    text-decoration: underline;
-  }
-  .print-btn {
-    background-color: #38bdf8;
-    color: #0f172a;
-    border: none;
-    font-weight: 700;
-    font-size: 8.8pt;
-    padding: 6px 14px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  .print-btn:hover {
-    background-color: #7dd3fc;
+  .interactive-box:hover {
+    transform: translateY(-2.5px);
+    border-color: var(--accent) !important;
+    box-shadow: 0 8px 18px -2px rgba(37, 99, 235, 0.12), 0 3px 8px -2px rgba(0, 0, 0, 0.05);
   }
 
-  /* HEADER */
+  /* HEADER BLOCK */
   .header-card {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     color: #ffffff;
-    padding: 18px 20px;
-    border-radius: 8px;
+    padding: 18px 22px;
+    border-radius: 10px;
     margin-bottom: 12px;
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 20px;
   }
-  .photo-box {
+  .photo-wrapper {
     flex-shrink: 0;
   }
   .profile-photo {
-    width: 88px;
-    height: 88px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #38bdf8;
+    border: 3px solid var(--accent-light);
     display: block;
     background-color: #334155;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   }
-  .info-box {
+  .info-wrapper {
     flex-grow: 1;
     min-width: 0;
   }
   .name {
-    font-size: 19pt;
+    font-size: 20pt;
     font-weight: 800;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.3px;
     margin: 0 0 2px 0;
     color: #ffffff;
     text-transform: uppercase;
     line-height: 1.15;
   }
   .title-tag {
-    font-size: 9.5pt;
+    font-size: 9.6pt;
     font-weight: 600;
-    color: #38bdf8;
-    margin: 0 0 6px 0;
+    color: var(--accent-light);
+    margin: 0 0 8px 0;
     letter-spacing: 0.3px;
     text-transform: uppercase;
   }
   .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 3px 12px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px 14px;
     font-size: 8.2pt;
     color: #e2e8f0;
   }
-  .contact-grid a {
+  .contact-item a {
     color: #e2e8f0;
     text-decoration: none;
   }
-  .contact-grid a:hover {
-    color: #38bdf8;
+  .contact-item a:hover {
+    color: var(--accent-light);
     text-decoration: underline;
   }
   .contact-label {
-    color: #38bdf8;
+    color: var(--accent-light);
     font-weight: 600;
   }
-  .header-links {
-    margin-top: 6px;
-    font-size: 8pt;
-    color: #cbd5e1;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+  .header-direct-link {
+    margin-top: 8px;
+    padding-top: 6px;
+    border-top: 1px solid rgba(226, 232, 240, 0.15);
+    font-size: 8.2pt;
   }
-  .header-links a {
-    color: #38bdf8;
+  .header-direct-link a {
+    color: var(--accent-light);
     text-decoration: none;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
   }
-  .header-links a:hover {
+  .header-direct-link a:hover {
+    color: #bae6fd;
     text-decoration: underline;
-  }
-
-  /* SECTION HEADERS */
-  .section-title {
-    font-size: 9.8pt;
-    font-weight: 700;
-    color: #0f172a;
-    text-transform: uppercase;
-    letter-spacing: 0.7px;
-    margin-top: 11px;
-    margin-bottom: 6px;
-    padding-bottom: 2px;
-    border-bottom: 2px solid #2563eb;
   }
 
   /* SUMMARY */
   .summary-card {
-    background-color: #f8fafc;
-    border-left: 4px solid #2563eb;
-    border-top: 1px solid #e2e8f0;
-    border-right: 1px solid #e2e8f0;
-    border-bottom: 1px solid #e2e8f0;
-    padding: 8px 12px;
-    border-radius: 0 6px 6px 0;
-    font-size: 8.5pt;
+    background-color: var(--bg-alt);
+    border-left: 4.5px solid var(--accent);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 9px 13px;
+    border-radius: 0 8px 8px 0;
+    font-size: 8.6pt;
     color: #334155;
-    line-height: 1.44;
+    line-height: 1.45;
     margin-bottom: 10px;
   }
 
-  /* ATS SKILLS TABLE */
-  .skills-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 6px 0;
-    margin-left: -6px;
-    margin-right: -6px;
+  /* GLOBAL REACH STRIP */
+  .international-strip {
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 7px 12px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .international-left {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 8px;
+  }
+  .international-label {
+    font-size: 7.9pt;
+    font-weight: 800;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 2px;
+  }
+  .country-tag {
+    background-color: #ffffff;
+    border: 1px solid var(--border-hover);
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 7.8pt;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .marketplace-group {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .marketplace-badge {
+    background-color: #e0f2fe;
+    border: 1px solid #7dd3fc;
+    color: #0369a1;
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 7.7pt;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .marketplace-badge:hover {
+    background-color: #bae6fd;
+  }
+
+  /* SECTION TITLE */
+  .section-title {
+    font-size: 9.6pt;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* COMPETENCIES GRID */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
     margin-bottom: 10px;
   }
   .skills-cell {
-    width: 33.33%;
-    vertical-align: top;
-    padding: 6px 9px;
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 6px;
+    padding: 8px 10px;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
   }
   .skills-heading {
     font-size: 8pt;
@@ -206,97 +265,108 @@
   }
   .skill-pill {
     display: inline-block;
-    background-color: #e0f2fe;
-    color: #0369a1;
+    background-color: var(--pill-bg);
+    color: var(--pill-text);
     font-size: 7.2pt;
     font-weight: 600;
-    padding: 1.5px 4.5px;
+    padding: 1.5px 5px;
     border-radius: 4px;
     margin-right: 2px;
     margin-bottom: 2.5px;
   }
 
-  /* ENTRIES / JOBS */
-  .entry-card {
-    margin-bottom: 8px;
-    background-color: #ffffff;
-    border: 1px solid #f1f5f9;
-    padding: 7px 10px;
-    border-radius: 6px;
+  /* EXPERIENCE SECTION */
+  .job-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7px;
+    margin-bottom: 10px;
   }
-  .entry-table {
-    width: 100%;
-    border-collapse: collapse;
+  .job-card {
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    border-radius: 8px;
+  }
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px;
     margin-bottom: 2px;
   }
-  .entry-role {
-    font-size: 9.1pt;
+  .job-role {
+    font-size: 9pt;
     font-weight: 700;
-    color: #0f172a;
+    color: var(--primary);
   }
-  .entry-dates {
+  .job-dates {
     font-size: 7.8pt;
     font-weight: 600;
-    color: #2563eb;
-    text-align: right;
-    white-space: nowrap;
+    color: var(--text-muted);
   }
-  .entry-org {
-    font-size: 8.3pt;
+  .job-dates.active {
+    color: var(--active-green);
+    background-color: var(--active-bg);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-weight: 700;
+  }
+  .job-org {
+    font-size: 8.2pt;
     font-weight: 600;
     color: #475569;
     margin-bottom: 2px;
   }
+  .org-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .org-link:hover {
+    text-decoration: underline;
+  }
   .bullet-list {
     margin: 2px 0 0 0;
-    padding-left: 13px;
+    padding-left: 14px;
   }
   .bullet-list li {
-    margin-bottom: 2.2px;
+    margin-bottom: 2px;
     font-size: 8.2pt;
     color: #334155;
     line-height: 1.36;
   }
 
-  /* TWO-COLUMN BOTTOM GRID */
-  .bottom-grid {
-    width: 100%;
-    border-collapse: collapse;
+  /* EDUCATION & DETAILS SPLIT */
+  .bottom-split {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 10px;
     margin-top: 4px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
-  .col-edu {
-    width: 52%;
-    vertical-align: top;
-    padding-right: 6px;
-  }
-  .col-side {
-    width: 48%;
-    vertical-align: top;
-    padding-left: 6px;
-  }
-
   .edu-item {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-left: 3px solid #2563eb;
-    padding: 6px 9px;
-    border-radius: 0 6px 6px 0;
-    margin-bottom: 5px;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent);
+    padding: 8px 11px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 6px;
   }
   .edu-degree {
-    font-size: 8.5pt;
+    font-size: 8.7pt;
     font-weight: 700;
-    color: #0f172a;
+    color: var(--primary);
   }
   .edu-school {
-    font-size: 8pt;
-    color: #2563eb;
+    font-size: 8.1pt;
+    color: var(--accent);
     font-weight: 600;
   }
   .edu-date {
-    font-size: 7.5pt;
-    color: #64748b;
+    font-size: 7.6pt;
+    color: var(--text-muted);
   }
   .cgpa-badge {
     display: inline-block;
@@ -304,342 +374,409 @@
     color: #15803d;
     font-size: 7.2pt;
     font-weight: 700;
-    padding: 1px 4px;
-    border-radius: 3px;
+    padding: 1px 5px;
+    border-radius: 4px;
     margin-top: 2px;
   }
-
+  .thesis-box {
+    margin-top: 4px;
+    padding: 4px 6px;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 7.5pt;
+    color: #334155;
+    line-height: 1.34;
+  }
   .side-box {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    padding: 6px 9px;
-    border-radius: 6px;
-    margin-bottom: 5px;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    padding: 8px 11px;
+    border-radius: 8px;
+    margin-bottom: 6px;
   }
   .side-title {
     font-size: 8.2pt;
     font-weight: 700;
-    color: #0f172a;
+    color: var(--primary);
     text-transform: uppercase;
     letter-spacing: 0.4px;
     margin-bottom: 3px;
     border-bottom: 1px solid #cbd5e1;
-    padding-bottom: 1.5px;
+    padding-bottom: 2px;
   }
   .side-list {
     font-size: 8pt;
     color: #334155;
-    line-height: 1.35;
+    line-height: 1.38;
   }
 
-  /* QR CONNECT BAR */
+  /* INTERACTIVE CLICKABLE QR MATRIX */
   .qr-section {
     margin-top: 8px;
-    padding: 8px 10px;
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    page-break-inside: avoid;
+    padding: 10px 12px;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
   }
-  .qr-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
+  .qr-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
   }
-  .qr-cell {
-    width: 25%;
-    vertical-align: top;
-    padding: 4px 6px;
-  }
-  .qr-img {
-    width: 66px;
-    height: 66px;
-    border-radius: 4px;
-    border: 1px solid #cbd5e1;
-    display: block;
-    margin: 0 auto 4px auto;
+  .qr-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #ffffff;
-  }
-  .qr-title {
-    font-size: 7.4pt;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 1px;
-  }
-  .qr-sub {
-    font-size: 6.8pt;
-    color: #2563eb;
-    font-weight: 600;
+    border: 1px solid var(--border-hover);
+    border-radius: 8px;
+    padding: 8px 6px;
     text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   }
-  .qr-sub:hover {
+  .qr-card:hover {
+    background-color: #f0f7ff;
+  }
+  .qr-card .qr-img {
+    width: 68px;
+    height: 68px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    display: block;
+    margin: 0 auto 5px auto;
+    background-color: #ffffff;
+    transition: all 0.25s ease;
+  }
+  .qr-card:hover .qr-img {
+    border-color: var(--accent-light);
+    transform: scale(1.04);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+  }
+  .qr-card .qr-title {
+    font-size: 7.7pt;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2px;
+    text-align: center;
+    transition: color 0.2s ease;
+  }
+  .qr-card:hover .qr-title {
+    color: var(--accent-hover);
+  }
+  .qr-card .qr-sub {
+    font-size: 7pt;
+    color: var(--accent);
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.2s ease;
+  }
+  .qr-card:hover .qr-sub {
+    color: #0284c7;
     text-decoration: underline;
   }
 
-  @media (max-width: 620px) {
-    .header-card {
-      flex-direction: column;
-      text-align: center;
+  /* RESPONSIVE LAYOUT */
+  @media screen and (max-width: 860px) {
+    body {
+      padding: 10px 6px;
+    }
+    .cv-card {
+      padding: 16px 14px;
     }
     .contact-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .skills-grid {
       grid-template-columns: 1fr;
-      text-align: center;
     }
-    .header-links {
-      justify-content: center;
+    .bottom-split {
+      grid-template-columns: 1fr;
+      gap: 0;
     }
-    .skills-table, .bottom-grid {
-      display: block;
-    }
-    .skills-cell, .col-edu, .col-side {
-      display: block;
-      width: 100%;
-      margin-bottom: 8px;
-      padding: 6px 0;
-    }
-    .qr-table, .qr-cell {
-      display: inline-block;
-      width: 48%;
-      margin-bottom: 8px;
+    .qr-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
     }
   }
 
+  @media screen and (max-width: 600px) {
+    .header-card {
+      flex-direction: column;
+      text-align: center;
+      padding: 14px 12px;
+    }
+    .name {
+      font-size: 16pt;
+    }
+    .contact-grid {
+      grid-template-columns: 1fr;
+      text-align: left;
+    }
+    .header-direct-link {
+      text-align: center;
+    }
+    .international-strip {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  /* PRINT PRESERVATION */
   @media print {
     body {
       background-color: #ffffff;
       padding: 0;
       max-width: 100%;
     }
-    .cv-container {
+    .cv-wrapper {
+      max-width: 100%;
+    }
+    .cv-card {
       box-shadow: none;
       padding: 0;
       border-radius: 0;
     }
-    .action-bar {
-      display: none;
+    .interactive-box:hover {
+      transform: none !important;
+      box-shadow: none !important;
     }
   }
 </style>
 </head>
 <body>
 
-  <!-- TOP ACTION BAR -->
-  <div class="action-bar">
-    <div>
-      <a href="https://umairyaseenjutt.github.io/umair.resume/" target="_blank" class="badge-link">🌐 Live Portfolio CV</a>
-      <a href="https://linkedin.com/in/umairyaseenjutt" target="_blank" class="badge-link">💼 LinkedIn Profile</a>
-    </div>
-    <button class="print-btn" onclick="window.print()">📥 Print / Save PDF</button>
-  </div>
+<div class="cv-wrapper">
 
-  <div class="cv-container">
+  <div class="cv-card">
 
     <!-- HEADER BLOCK -->
     <header class="header-card">
-      <div class="photo-box">
-        <img src="profile photo sqr.png" class="profile-photo" alt="Muhammad Umair" onerror="this.onerror=null; this.src='input_file_0.png';">
+      <div class="photo-wrapper">
+        <img src="profile photo sqr.png" class="profile-photo" alt="Muhammad Umair" onerror="this.onerror=null; this.src='profile_photo.jpg';">
       </div>
-      <div class="info-box">
-        <h1 class="name">Muhammad Umair</h1>
-        <div class="title-tag">Faculty Candidate in Communication Skills | Media Studies & Digital Communication</div>
+      <div class="info-wrapper">
+        <h1 class="name">Muhammad Umair</h1>[cite: 1]
+        <div class="title-tag">Faculty Candidate in Strategic Communication, Consumer Psychology & Digital Media Pedagogy</div>
         <div class="contact-grid">
-          <div class="contact-item"><span class="contact-label">Location:</span> Riyadh, Saudi Arabia</div>
-          <div class="contact-item"><span class="contact-label">Phone / WA:</span> <a href="https://wa.me/966536210490" target="_blank">+966 53 621 0490</a></div>
-          <div class="contact-item"><span class="contact-label">Email:</span> <a href="mailto:umairyaseenjutt@gmail.com">umairyaseenjutt@gmail.com</a></div>
-          <div class="contact-item"><span class="contact-label">LinkedIn:</span> <a href="https://linkedin.com/in/umairyaseenjutt" target="_blank">linkedin.com/in/umairyaseenjutt</a></div>
+          <div class="contact-item"><span class="contact-label">Location:</span> Riyadh, Saudi Arabia (On-Site Ready)</div>[cite: 1]
+          <div class="contact-item"><span class="contact-label">Phone / WA:</span> <a href="https://wa.me/966536210490" target="_blank">+966 53 621 0490</a></div>[cite: 1]
+          <div class="contact-item"><span class="contact-label">Email:</span> <a href="mailto:umairyaseenjutt@gmail.com">umairyaseenjutt@gmail.com</a></div>[cite: 1]
         </div>
-        <div class="header-links">
-          <span class="contact-label">Live Teaching & Portfolios:</span>
-          <a href="https://umairyaseenjutt.github.io/umair.resume/" target="_blank">📄 Interactive CV</a>
-          <a href="https://www.youtube.com/@mbastudio.online/playlists" target="_blank">🎬 Video & Lecture Playlists</a>
+        <div class="header-direct-link">
+          <a href="https://www.youtube.com/playlist?list=PLzxfLA-b-Eqwz-BB-7EIwGyjjv_Nym-uH" target="_blank">🎬 Commercial Advertisements, SaaS Demos & Agency Portfolio Playlist</a>[cite: 1]
         </div>
       </div>
     </header>
 
-    <!-- PROFESSIONAL SUMMARY (ALIGNED TO PSU REQUIREMENTS) -->
-    <section class="summary-card">
-      Dedicated and student-centered <strong>Communication Skills Educator</strong> with an advanced academic foundation in <strong>Public Relations & Advertising (MPhil track)</strong> and <strong>Behavioral Psychology (BS, CGPA 3.47 / 4.00)</strong>. Over 7 years of instructional and digital communication experience translating complex rhetorical frameworks, audience psychology, and digital media technologies into structured, tertiary-level learning experiences. Specialized in fostering undergraduate communication competence across <strong>public speaking, interpersonal dynamics, professional writing, and digital media literacy</strong> through active, experiential learning methodologies. Based locally in <strong>Riyadh</strong> with basic Arabic capability, available for immediate on-campus faculty engagement.
+    <!-- PROFESSIONAL & ACADEMIC SUMMARY -->
+    <section class="summary-card interactive-box">
+      Higher education <strong>Faculty Candidate, Communication Strategist, and Emerging Tech Educator</strong> with over 7 years of global instructional delivery, multimedia course creation, and curriculum development[cite: 1]. Integrates advanced graduate coursework in <strong>Public Relations & Advertising (CGPA: 3.70 / 4.00, ongoing)</strong> with foundational expertise in <strong>Applied & Consumer Psychology (CGPA: 3.47 / 4.00)</strong> to teach audience behavioral analysis, persuasive message design, AI-assisted media workflows, and multimedia production[cite: 1]. Adept at active classroom instruction, digital LMS management, and mentoring undergraduate capstone projects[cite: 1].
     </section>
 
-    <!-- ATS CORE COMPETENCIES MATRIX -->
-    <section>
-      <div class="section-title">Academic Competencies & Teaching Areas</div>
-      <table class="skills-table">
-        <tr>
-          <td class="skills-cell">
-            <div class="skills-heading">Communication Pedagogy</div>
-            <span class="skill-pill">Public Speaking</span>
-            <span class="skill-pill">Interpersonal Communication</span>
-            <span class="skill-pill">Professional & Technical Writing</span>
-            <span class="skill-pill">Active Learning Methodologies</span>
-            <span class="skill-pill">Speech Anxiety Management</span>
-            <span class="skill-pill">Audience Psychology</span>
-          </td>
-          <td class="skills-cell">
-            <div class="skills-heading">Curriculum & Assessment</div>
-            <span class="skill-pill">Course Syllabi Design</span>
-            <span class="skill-pill">Rubric-Based Evaluation</span>
-            <span class="skill-pill">Formative & Summative Testing</span>
-            <span class="skill-pill">Undergraduate Advising</span>
-            <span class="skill-pill">LMS & Centralized E-Learning</span>
-            <span class="skill-pill">Academic Reporting</span>
-          </td>
-          <td class="skills-cell">
-            <div class="skills-heading">Digital Communication & Media</div>
-            <span class="skill-pill">Media Literacy & Studies</span>
-            <span class="skill-pill">Multimodal Presentations</span>
-            <span class="skill-pill">Generative AI Literacy</span>
-            <span class="skill-pill">Digital Storytelling</span>
-            <span class="skill-pill">Educational Screencasting</span>
-            <span class="skill-pill">Camtasia & Adobe Suite</span>
-          </td>
-        </tr>
-      </table>
-    </section>
-
-    <!-- TEACHING & ACADEMIC INSTRUCTION -->
-    <section>
-      <div class="section-title">Teaching & Instructional Experience</div>
-
-      <div class="entry-card">
-        <table class="entry-table">
-          <tr>
-            <td class="entry-role">Course Instructor & Curriculum Designer (Digital Media & AI Literacy)</td>
-            <td class="entry-dates">2024 – Present</td>
-          </tr>
-        </table>
-        <div class="entry-org">zakariaafzal.com | Online Vocational & Media Education</div>
-        <ul class="bullet-list">
-          <li>Design and deliver interactive undergraduate-level modules on digital communication, prompt design, and multimodal content creation.</li>
-          <li>Prepare complete electronic course packages for each academic term, including quarterly syllabi, presentation slide decks, practical assignments, and assessment rubrics.</li>
-          <li>Utilize active learning methodologies and project-based assignments to build students' critical thinking and digital problem-solving skills.</li>
-          <li>Deliver structured feedback and individual student mentoring, ensuring academic growth and high completion rates across diverse cohorts.</li>
-        </ul>
+    <!-- GLOBAL REACH STRIP -->
+    <section class="international-strip interactive-box">
+      <div class="international-left">
+        <div class="international-label">Global Client Reach:</div>
+        <span class="country-tag">🇺🇸 USA</span>
+        <span class="country-tag">🇸🇦 Saudi Arabia</span>
+        <span class="country-tag">🇬🇧 UK</span>
+        <span class="country-tag">🇨🇦 Canada</span>
+        <span class="country-tag">🇦🇺 Australia</span>
       </div>
-
-      <div class="entry-card">
-        <table class="entry-table">
-          <tr>
-            <td class="entry-role">Classroom Educator & Communication Facilitator</td>
-            <td class="entry-dates">Formal Academic Experience</td>
-          </tr>
-        </table>
-        <div class="entry-org">Academic & Institutional Environments</div>
-        <ul class="bullet-list">
-          <li>Facilitated structured, student-centered classroom environments focused on public speaking, collaborative discussions, and oral presentation delivery.</li>
-          <li>Applied behavioral psychology principles to help students overcome communication apprehension and build confidence in interpersonal dialogue.</li>
-          <li>Advised and mentored students on academic writing mechanics, thesis clarity, and structured professional correspondence.</li>
-        </ul>
+      <div class="marketplace-group">
+        <a href="https://fiverr.com/umairyaseenjutt" target="_blank" class="marketplace-badge interactive-box">⭐ Fiverr: 800+ Orders (2018–2025)</a>[cite: 1]
+        <a href="https://www.upwork.com/freelancers/umairyaseenjutt?mp_source=share" target="_blank" class="marketplace-badge interactive-box">🏆 Upwork: Top-Rated (2018–Present)</a>[cite: 1]
       </div>
     </section>
 
-    <!-- APPLIED DIGITAL COMMUNICATION & PROFESSIONAL EXPERIENCE -->
+    <!-- CORE COMPETENCIES & TEACHING TOOLKIT -->
     <section>
-      <div class="section-title">Digital Communication & Applied Media Experience</div>
-
-      <div class="entry-card">
-        <table class="entry-table">
-          <tr>
-            <td class="entry-role">Executive Communication Strategist & Instructional Video Lead</td>
-            <td class="entry-dates">2021 – Present (3+ Years)</td>
-          </tr>
-        </table>
-        <div class="entry-org"><a href="https://clinichq.com/" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 600;">ClinicHQ</a> | Leading US Veterinary SaaS (Contract via Founder Gina Clemmer)</div>
-        <ul class="bullet-list">
-          <li>Authored and produced the complete nationwide digital customer education and staff training video curriculum for veterinary hospitals across the US.</li>
-          <li>Deconstructed complex technical workflows and EHR systems into clear, accessible instructional media modules.</li>
-          <li>Directed executive communications and brand messaging, applying audience modeling to maintain high client trust and retention.</li>
-        </ul>
-      </div>
-
-      <div class="entry-card">
-        <table class="entry-table">
-          <tr>
-            <td class="entry-role">Digital Media Content Producer & Educational Screencast Specialist</td>
-            <td class="entry-dates">2018 – Present</td>
-          </tr>
-        </table>
-        <div class="entry-org">Global Technology Brands (<a href="https://www.youtube.com/WondershareDemoCreator" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 600;">Wondershare DemoCreator</a>, Doratoon, Upwork & Fiverr)</div>
-        <ul class="bullet-list">
-          <li>Produced official instructional video tutorials, UI screencasts, and educational walk-throughs for global software platforms.</li>
-          <li>Managed end-to-end multimedia production using Camtasia, Adobe Premiere Pro, and After Effects to support self-paced digital learning.</li>
-          <li>Maintained a Top-Rated record across 800+ international projects with verified 5-star ratings for clarity and technical execution.</li>
-        </ul>
+      <div class="section-title">⚡ Core Competencies & Academic Toolkit</div>
+      <div class="skills-grid">
+        <div class="skills-cell interactive-box">
+          <div class="skills-heading">Strategic PR & Consumer Psychology</div>
+          <span class="skill-pill">Consumer Behavior & Insights</span>
+          <span class="skill-pill">Strategic Communications (IMC)</span>
+          <span class="skill-pill">Brand Positioning & Governance</span>
+          <span class="skill-pill">Audience Behavioral Analysis</span>
+          <span class="skill-pill">Persuasive Rhetoric & PR</span>
+        </div>
+        <div class="skills-cell interactive-box">
+          <div class="skills-heading">Digital & AI Instruction</div>
+          <span class="skill-pill">Curriculum & Syllabus Design</span>
+          <span class="skill-pill">Generative AI (LLMs & Prompts)</span>
+          <span class="skill-pill">Midjourney & Runway Workflows</span>
+          <span class="skill-pill">LMS & E-Learning Portals</span>
+          <span class="skill-pill">Project-Based Learning (PBL)</span>
+        </div>
+        <div class="skills-cell interactive-box">
+          <div class="skills-heading">Multimedia & Media Production</div>
+          <span class="skill-pill">Adobe Premiere Pro</span>
+          <span class="skill-pill">Adobe After Effects</span>
+          <span class="skill-pill">Camtasia Screencasting</span>
+          <span class="skill-pill">Commercial & SaaS Ads</span>
+          <span class="skill-pill">Slide Design Ergonomics</span>
+        </div>
       </div>
     </section>
 
-    <!-- EDUCATION & PROFILE DETAILS -->
+    <!-- PROFESSIONAL & INSTRUCTIONAL EXPERIENCE -->
     <section>
-      <div class="section-title">Education & Scholarly Profile</div>
-      <table class="bottom-grid">
-        <tr>
-          <td class="col-edu">
-            <div class="edu-item">
-              <div class="edu-degree">MPhil in Public Relations & Advertising</div>
-              <div class="edu-school">University of the Punjab</div>
-              <div class="edu-date">October 2025 – May 2027</div>
-              <div style="font-size: 7.6pt; color: #475569; margin-top: 2px;">Focus: Strategic Communication, Media Reception, Rhetoric & Campaign Analytics</div>
-            </div>
-            <div class="edu-item">
-              <div class="edu-degree">Bachelor of Science in Psychology</div>
-              <div class="edu-school">University of Sargodha</div>
-              <div class="edu-date">March 2020 – August 2024</div>
-              <div><span class="cgpa-badge">CGPA: 3.47 / 4.00</span></div>
-              <div style="font-size: 7.6pt; color: #475569; margin-top: 2px;">Focus: Cognitive Processing, Interpersonal Dynamics, Behavioral Communication</div>
-            </div>
-          </td>
-          <td class="col-side">
-            <div class="side-box">
-              <div class="side-title">Languages</div>
-              <div class="side-list">
-                <strong>English:</strong> Professional / Fluent (Teaching Medium)<br>
-                <strong>Arabic:</strong> Basic Working Knowledge<br>
-                <strong>Urdu:</strong> Native / Bilingual
-              </div>
-            </div>
-            <div class="side-box">
-              <div class="side-title">Scholarly & Teaching Interests</div>
-              <div class="side-list">
-                • Digital Media Literacy & Multimodal Rhetoric<br>
-                • Generative AI in Academic & Professional Writing<br>
-                • Audience Psychology in Public Address
-              </div>
-            </div>
-          </td>
-        </tr>
-      </table>
+      <div class="section-title">💼 Teaching & Professional Experience</div>
+      <div class="job-grid">
+
+        <div class="job-card interactive-box">
+          <div class="job-header">
+            <div class="job-role">Online AI Course Instructor & Curriculum Specialist</div>
+            <div class="job-dates active">2024 – Present</div>[cite: 1]
+          </div>
+          <div class="job-org"><a href="https://zakariaafzal.com/" target="_blank" class="org-link">zakariaafzal.com</a> | Online Emerging Tech Platform</div>[cite: 1]
+          <ul class="bullet-list">
+            <li>Design and deliver modular digital curricula covering prompt engineering, generative image synthesis (Midjourney), and AI video creation workflows (Runway)[cite: 1].</li>
+            <li>Prepare term course packages, including syllabi, lecture presentations, practical lab exercises, and rubric-based evaluations[cite: 1].</li>
+            <li>Supervise hands-on student projects and mentor learners on applying AI automation to creative and communication workflows[cite: 1].</li>
+          </ul>
+        </div>
+
+        <div class="job-card interactive-box">
+          <div class="job-header">
+            <div class="job-role">Enterprise Multimedia & Technical Content Producer</div>
+            <div class="job-dates active">Aug 2018 – Present</div>[cite: 1]
+          </div>
+          <div class="job-org"><a href="https://www.upwork.com/freelancers/umairyaseenjutt?mp_source=share" target="_blank" class="org-link">Upwork Enterprise Freelancing</a> (Top-Rated | 200+ International Clients)</div>[cite: 1]
+          <ul class="bullet-list">
+            <li>Direct end-to-end commercial product walkthroughs, software screencasts, and customer education videos for global technology companies[cite: 1].</li>
+            <li>Translate complex technical architectures, software interfaces, and feature sets into structured, high-retention instructional and promotional media[cite: 1].</li>
+          </ul>
+        </div>
+
+        <div class="job-card interactive-box">
+          <div class="job-header">
+            <div class="job-role">Strategic PR & Digital Media Specialist</div>
+            <div class="job-dates">2021 – 2026</div>[cite: 1]
+          </div>
+          <div class="job-org"><a href="https://clinichq.com/" target="_blank" class="org-link">ClinicHQ</a> (USA Healthcare SaaS Ecosystem)</div>[cite: 1]
+          <ul class="bullet-list">
+            <li>Served as dedicated PR strategist and communications lead for executive leadership across a 5-year partnership[cite: 1].</li>
+            <li>Authored and produced the complete nationwide digital staff training library and customer onboarding video series for veterinary hospitals and clinics across the US[cite: 1].</li>
+          </ul>
+        </div>
+
+        <div class="job-card interactive-box">
+          <div class="job-header">
+            <div class="job-role">Instructional Video Producer & Motion Designer</div>
+            <div class="job-dates">Aug 2018 – Dec 2025</div>[cite: 1]
+          </div>
+          <div class="job-org"><a href="https://fiverr.com/umairyaseenjutt" target="_blank" class="org-link">Fiverr Pro / Level 2 Seller</a> (800+ Completed Orders | 400+ 5-Star Reviews)</div>[cite: 1]
+          <ul class="bullet-list">
+            <li>Delivered 800+ promotional, commercial, and instructional video deliverables for international clients, maintaining a verified 5.0★ rating[cite: 1].</li>
+            <li>Produced official tutorial videos and advertising demos for global software brands including Wondershare DemoCreator and Doratoon[cite: 1].</li>
+          </ul>
+        </div>
+
+        <div class="job-card interactive-box">
+          <div class="job-header">
+            <div class="job-role">Instructional Media Creator & Channel Producer</div>
+            <div class="job-dates">Jan 2016 – 2025</div>[cite: 1]
+          </div>
+          <div class="job-org"><a href="https://www.youtube.com/@mbastudio.online/playlists" target="_blank" class="org-link">MBA Studio</a> (Educational Digital Media Channel)</div>[cite: 1]
+          <ul class="bullet-list">
+            <li>Produced and published instructional tutorials focusing on video post-production workflows, visual pacing, and creative software literacy[cite: 1].</li>
+          </ul>
+        </div>
+
+      </div>
     </section>
 
-    <!-- SCAN TO VERIFY CREDENTIALS -->
-    <section class="qr-section">
-      <div class="section-title" style="margin-top: 0; margin-bottom: 6px;">Interactive Credentials & Portfolio</div>
-      <table class="qr-table">
-        <tr>
-          <td class="qr-cell">
-            <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fumairyaseenjutt.github.io%2Fumair.resume%2F" alt="Live CV QR">
-            <div class="qr-title">Interactive CV</div>
-            <a href="https://umairyaseenjutt.github.io/umair.resume/" target="_blank" class="qr-sub">umair.resume</a>
-          </td>
-          <td class="qr-cell">
-            <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Flinkedin.com%2Fin%2Fumairyaseenjutt" alt="LinkedIn QR">
-            <div class="qr-title">LinkedIn Profile</div>
-            <a href="https://linkedin.com/in/umairyaseenjutt" target="_blank" class="qr-sub">umairyaseenjutt</a>
-          </td>
-          <td class="qr-cell">
-            <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwww.youtube.com%2F%40mbastudio.online%2Fplaylists" alt="Teaching Playlists QR">
-            <div class="qr-title">Lectures & Media</div>
-            <a href="https://www.youtube.com/@mbastudio.online/playlists" target="_blank" class="qr-sub">YouTube Playlists</a>
-          </td>
-          <td class="qr-cell">
-            <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwa.me%2F966536210490" alt="WhatsApp QR">
-            <div class="qr-title">WhatsApp Direct</div>
-            <a href="https://wa.me/966536210490" target="_blank" class="qr-sub">+966 53 621 0490</a>
-          </td>
-        </tr>
-      </table>
+    <!-- EDUCATION & RESEARCH PROFILE -->
+    <section>
+      <div class="section-title">🎓 Education & Scholarly Profile</div>
+      <div class="bottom-split">
+        <div>
+          <div class="edu-item interactive-box">
+            <div class="edu-degree">MPhil in Public Relations & Advertising</div>[cite: 1]
+            <div class="edu-school"><a href="https://pu.edu.pk/home/department/52/School-of-Communication-Studies" target="_blank" class="org-link">School of Communication Studies, University of the Punjab</a></div>[cite: 1]
+            <div class="edu-date">October 2025 – May 2027 (Ongoing)</div>[cite: 1]
+            <div><span class="cgpa-badge">CGPA: 3.70 / 4.00</span></div>[cite: 1]
+            <div class="thesis-box">
+              <strong>Ongoing MPhil Thesis:</strong> <em>"Financial Insecurity and Work Stress as Predictors of Psychological Well-Being among Freelancers in Pakistan: The Mediating Role of Work–Life Balance and Social Isolation."</em><br>
+              <strong>Scholarly & Thesis Interests:</strong> Artificial Intelligence in Media & Advertising, Algorithmic Persuasion, Social Media Dynamics, and the Future of Digital Communication Pedagogy.
+            </div>
+          </div>
+          <div class="edu-item interactive-box">
+            <div class="edu-degree">BS in Applied Psychology</div>[cite: 1]
+            <div class="edu-school"><a href="https://su.edu.pk/" target="_blank" class="org-link">Department of Psychology, University of Sargodha</a></div>[cite: 1]
+            <div class="edu-date">March 2020 – August 2024</div>[cite: 1]
+            <div><span class="cgpa-badge">CGPA: 3.47 / 4.00</span></div>[cite: 1]
+            <div class="thesis-box">
+              <strong>Completed BS Thesis:</strong> <em>"Relationship Among Leader’s Political Skill, Leader Member Exchange, Ethical Leadership And Some Work Outcomes Among Employees."</em><br>
+              <strong>Academic Specialization:</strong> Consumer Psychology, Cognitive Reception, Organizational Behavior Modeling, and Quantitative Research Methodologies.
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="side-box interactive-box">
+            <div class="side-title">Languages</div>
+            <div class="side-list">
+              <strong>English:</strong> Professional / Fluent (Teaching Medium)[cite: 1]<br>
+              <strong>Urdu:</strong> Native / Bilingual[cite: 1]<br>
+              <strong>Arabic:</strong> Basic Working Knowledge[cite: 1]
+            </div>
+          </div>
+          <div class="side-box interactive-box">
+            <div class="side-title">Pedagogical Strengths</div>
+            <div class="side-list">
+              • Consumer psychology-backed audience engagement<br>
+              • Generative AI & modern workflow training<br>
+              • Active student-centered learning & rubric design<br>
+              • Commercial video & agency-grade ad creation
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CLICKABLE QR MATRIX -->
+    <section class="qr-section interactive-box">
+      <div class="section-title" style="margin-top: 0; margin-bottom: 8px;">📲 Scan or Click to Verify Academic & Media Credentials</div>
+      <div class="qr-grid">
+
+        <a href="https://umairyaseenjutt.github.io/muhammadumair/" target="_blank" class="qr-card interactive-box" title="Open Teaching Dossier">
+          <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fumairyaseenjutt.github.io%2Fmuhammadumair%2F" alt="Teaching Dossier QR">
+          <div class="qr-title">Teaching Dossier</div>
+          <span class="qr-sub">muhammadumair</span>
+        </a>
+
+        <a href="https://fiverr.com/umairyaseenjutt" target="_blank" class="qr-card interactive-box" title="Open Fiverr Freelance Portfolio">
+          <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Ffiverr.com%2Fumairyaseenjutt" alt="Fiverr QR">
+          <div class="qr-title">Fiverr Adverts Freelance</div>
+          <span class="qr-sub">800+ Global Deliverables</span>
+        </a>
+
+        <a href="https://www.youtube.com/playlist?list=PLzxfLA-b-Eqwz-BB-7EIwGyjjv_Nym-uH" target="_blank" class="qr-card interactive-box" title="Open Advertisements We Made Playlist">
+          <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLzxfLA-b-Eqwz-BB-7EIwGyjjv_Nym-uH" alt="Advertisements QR">
+          <div class="qr-title">Advertisements We Made</div>
+          <span class="qr-sub">Commercial Video Playlist</span>
+        </a>
+
+        <a href="https://wa.me/966536210490" target="_blank" class="qr-card interactive-box" title="Open Direct WhatsApp Contact">
+          <img class="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https%3A%2F%2Fwa.me%2F966536210490" alt="WhatsApp Direct Line QR">
+          <div class="qr-title">Direct Contact</div>
+          <span class="qr-sub">+966 53 621 0490</span>
+        </a>
+
+      </div>
     </section>
 
   </div>
+
+</div>
 
 </body>
 </html>
